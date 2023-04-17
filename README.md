@@ -7,7 +7,7 @@ Get started quickly with IU Jetstream2's API using Docker. Assuming you have [Do
 You will need a few settings from your openrc files to configure your API access.
 
 First, copy `jetstream.env.sample` to `jetstream.env`. You will need to enter some settings into this file that you can get from your `openrc` file. Per 
-[the Jetstream2 documentation](https://docs.jetstream-cloud.org/ui/cli/openrc/), you can obtain your openrc file as follows:
+[the Jetstream2 documentation](https://docs.jetstream-cloud.org/ui/cli/auth/), you can obtain your openrc file as follows:
 
 1. Log into
    [ https://js2.jetstream-cloud.org]( https://js2.jetstream-cloud.org) using XSEDE 
@@ -17,7 +17,7 @@ First, copy `jetstream.env.sample` to `jetstream.env`. You will need to enter so
 2. If it's not already selected, select your allocation within the dropdown at the top.
 3. Navigate to Identity > Application > Create Application Credentials
 4. Enter name like "<Your name> Jetstream2 API credential"
-5. Create a secure secret (long passphrase or [UUID](https://www.uuidgenerator.net/)). 
+5. Create a secure secret ([long passphrase](https://www.useapassphrase.com/) or [UUID](https://www.uuidgenerator.net/)). 
    Don't use a personal password, since this will be stored in free text within your 
    openrc file.
 6. Set an expiration date (e.g., 1-2 years from now). If you don't set an expiration 
@@ -46,7 +46,6 @@ can validate it's working by testing the `os flavor list` command to list out
 available flavors of server instances:
 
 ```bash
-os flavor list
 # os flavor list
 +----+-----------+--------+------+-----------+-------+-----------+
 | ID | Name      |    RAM | Disk | Ephemeral | VCPUs | Is Public |

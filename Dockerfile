@@ -1,10 +1,11 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 RUN apt-get update && \
 	apt-get install -y \
 		python3 \
 		python3-dev \
-		python3-pip && \
+		python3-pip \
+		jq && \
 	pip install \
 		--upgrade pip \
 		python-swiftclient \
